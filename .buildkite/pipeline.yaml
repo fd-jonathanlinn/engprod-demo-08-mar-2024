@@ -1,0 +1,13 @@
+---
+steps:
+  - block: "Package names"
+    prompt: "Fill out the names of the packages, space-separated, to use"
+    fields:
+      - text: "Space-separated package names"
+        key: "package-names"
+
+  - label: "Generate steps"
+    command: ci/generate-steps.sh
+    agents:
+      queue: pipeline-upload
+      
